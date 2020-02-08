@@ -1,0 +1,10 @@
+
+- name: install zip
+  become: yes
+  package:
+    name: "{{ item }}"
+    state: latest
+    update_cache: true
+  loop:
+    - zip
+    - vim    
